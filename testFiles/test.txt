@@ -1,0 +1,1114 @@
+82
+73
+70
+70
+72
+30
+0
+0
+78
+73
+75
+83
+78
+73
+83
+73
+68
+1
+0
+0
+1
+0
+0
+0
+{
+    "author": "Freelance Soundlabs",
+    "bankchain": [
+        "Serum",
+        "Factory",
+        ""
+    ],
+    "characters": [
+        "EDM"
+    ],
+    "comment": "NKS Created By \nFreelance Soundlabs\n\nhttp://freelancesoundlabs.com\n\nNKS Version 2.5.2\n15-Apr-19",
+    "deviceType": "INST",
+    "modes": [],
+    "name": "PL Totem [7S]",
+    "types": [
+        [
+            "Genre"
+        ],
+        [
+            "Piano / Keys",
+            "Synth Pluck"
+        ]
+    ],
+    "uuid": "c7ce05b1-e9a5-4d94-b305-7acb18a57683",
+    "vendor": "Xfer Records"
+}
+78
+73
+67
+65
+125
+21
+0
+0
+1
+0
+0
+0
+{
+    "ni8": [
+        [
+            {
+                "autoname": false,
+                "id": 0,
+                "name": "Volume",
+                "section": "MASTER",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 65,
+                "name": "Time",
+                "section": "PORTA",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 66,
+                "name": "Curve",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 216,
+                "name": "Filter",
+                "section": "ON/OFF",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 212,
+                "name": "OSC A",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 213,
+                "name": "OSC B",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 215,
+                "name": "SUB",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 214,
+                "name": "Noise",
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 166,
+                "name": "Up",
+                "section": "BEND AMT",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 167,
+                "name": "Down",
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "id": 218,
+                "name": "MACRO 1",
+                "section": "MACRO",
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "id": 219,
+                "name": "MACRO 2",
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "id": 220,
+                "name": "MACRO 3",
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "id": 221,
+                "name": "MACRO 4",
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 45,
+                "name": "Cutoff",
+                "section": "FILTER",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 46,
+                "name": "Reso",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 50,
+                "name": "Stereo",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 47,
+                "name": "Drive",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 48,
+                "name": "Variance",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 49,
+                "name": "Mix",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 44,
+                "name": "Type",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 288,
+                "name": "Keytrack",
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 33,
+                "name": "Level",
+                "section": "SUB OSC",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 34,
+                "name": "Pan",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 170,
+                "name": "Shape",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 171,
+                "name": "Octave",
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 1,
+                "name": "Level",
+                "section": "OSC A",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 2,
+                "name": "Pan",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 13,
+                "name": "Phase",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 12,
+                "name": "Random",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 7,
+                "name": "Detune",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 8,
+                "name": "Blend",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 11,
+                "name": "WT Pos",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 9,
+                "name": "Warp",
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 14,
+                "name": "Level",
+                "section": "OSC B",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 15,
+                "name": "Pan",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 26,
+                "name": "Phase",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 25,
+                "name": "Random",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 20,
+                "name": "Detune",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 21,
+                "name": "Blend",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 24,
+                "name": "WT Pos",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 22,
+                "name": "Warp",
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 35,
+                "name": "Attack",
+                "section": "ENV 1",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 36,
+                "name": "Hold",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 37,
+                "name": "Decay",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 38,
+                "name": "Sustain",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 39,
+                "name": "Release",
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 51,
+                "name": "Attack",
+                "section": "ENV 2",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 52,
+                "name": "Hold",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 53,
+                "name": "Decay",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 54,
+                "name": "Sustain",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 55,
+                "name": "Release",
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 56,
+                "name": "Attack",
+                "section": "ENV 3",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 57,
+                "name": "Hold",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 58,
+                "name": "Decay",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 59,
+                "name": "Sustain",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 60,
+                "name": "Release",
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 61,
+                "name": "Rate",
+                "section": "LFO 1",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 223,
+                "name": "Smooth",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 62,
+                "name": "Rate",
+                "section": "LFO 2",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 224,
+                "name": "Smooth",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 63,
+                "name": "Rate",
+                "section": "LFO 3",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 225,
+                "name": "Smooth",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 64,
+                "name": "Rate",
+                "section": "LFO 4",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 226,
+                "name": "Smooth",
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 163,
+                "name": "ON/OFF",
+                "section": "HYPER",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 147,
+                "name": "Mix",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 148,
+                "name": "Rate",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 149,
+                "name": "Detune",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 153,
+                "name": "Mix",
+                "section": "DIMENSION",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 152,
+                "name": "Size",
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 154,
+                "name": "ON/OFF",
+                "section": "DISTORT",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 96,
+                "name": "Mix",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 99,
+                "name": "Mode",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 102,
+                "name": "Pre/Post",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 100,
+                "name": "Freq",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 101,
+                "name": "Width",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 98,
+                "name": "Filter",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 97,
+                "name": "Drive",
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 155,
+                "name": "ON/OFF",
+                "section": "FLANGER",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 103,
+                "name": "Mix",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 105,
+                "name": "Rate",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 104,
+                "name": "Sync",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 106,
+                "name": "Depth",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 107,
+                "name": "Feed",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 108,
+                "name": "Phase",
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 156,
+                "name": "OFF/ON",
+                "section": "PHASE",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 109,
+                "name": "Mix",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 111,
+                "name": "Rate",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 110,
+                "name": "Sync",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 112,
+                "name": "Depth",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 113,
+                "name": "Freq",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 114,
+                "name": "Feed",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 115,
+                "name": "Phase",
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 157,
+                "name": "ON/OFF",
+                "section": "CHORUS",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 116,
+                "name": "Mix",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 118,
+                "name": "Rate",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 119,
+                "name": "Delay 1",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 120,
+                "name": "Delay 2",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 121,
+                "name": "Depth",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 122,
+                "name": "Feed",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 123,
+                "name": "Filter",
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 158,
+                "name": "ON/OFF",
+                "section": "DELAY",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 124,
+                "name": "Mix",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 132,
+                "name": "Feed",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 127,
+                "name": "Sync",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 129,
+                "name": "Time L",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 130,
+                "name": "Time R",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 125,
+                "name": "Freq",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 126,
+                "name": "Width",
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 159,
+                "name": "ON/OFF",
+                "section": "COMPRESS",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 269,
+                "name": "Mix",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 135,
+                "name": "Thresh",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 136,
+                "name": "Ratio",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 137,
+                "name": "Attack",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 138,
+                "name": "Release",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 139,
+                "name": "Gain",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 140,
+                "name": "Multiband",
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 160,
+                "name": "ON/OFF",
+                "section": "REVERB",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 81,
+                "name": "Mix",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 82,
+                "name": "Size",
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "id": 83,
+                "name": "VerbPDly",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 84,
+                "name": "Low Cut",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 86,
+                "name": "Hi Cut",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 85,
+                "name": "Spin",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 87,
+                "name": "Depth",
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 161,
+                "name": "ON/OFF",
+                "section": "EQ",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 88,
+                "name": "Low Freq",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 90,
+                "name": "Low Q",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 92,
+                "name": "Low Gain",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 89,
+                "name": "Hi Freq",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 91,
+                "name": "Hi Q",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 93,
+                "name": "Hi Gain",
+                "vflag": false
+            },
+            {
+                "autoname": true,
+                "vflag": false
+            }
+        ],
+        [
+            {
+                "autoname": false,
+                "id": 162,
+                "name": "ON/OFF",
+                "section": "FILTER",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 141,
+                "name": "Mix",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 142,
+                "name": "Type",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 143,
+                "name": "Cutoff",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 144,
+                "name": "Reso",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 145,
+                "name": "Drive",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 146,
+                "name": "Variable",
+                "vflag": false
+            },
+            {
+                "autoname": false,
+                "id": 268,
+                "name": "Pan",
+                "vflag": false
+            }
+        ]
+    ]
+}
+0
+80
+76
+73
+68
+20
+0
+0
+0
+1
+0
+0
+0
+{
+    "VST.magic": 1483109208
+}
+80
+67
+72
+75
+77
+7
+0
+0
+1
+0
+0
+0
+120
+1
+-19
+92
+125
+80
+85
+69
+20
+"\u000Fê/\u0013\u0005\u0013\u0002\u0015\u001Fî_Tí\u001FI\u0018w\u000F\u001F£Ú\f\u0015°LQ±'¢<E"
+80
+48
+84
+[
+    [
+        -25,
+        48,
+        26,
+        "%Êî\"ì",
+        101,
+        [
+            25,
+            [
+                -26,
+                56,
+                [
+                    "f\fSR‚†",
+                    -29,
+                    52,
+                    80,
+                    {
