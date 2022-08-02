@@ -19,6 +19,7 @@ const {
 /* const { exec } = require("child_process");
 const { promisify } = require("util"); */
 var exec = require('gulp-exec');
+spawn = require('child_process').spawn
 
 // paths, misc settings
 const $ = {
@@ -181,30 +182,32 @@ exports.testRemapNksf2Vorbis = () =>{
 	4. write contents to file
 */
 
-exports.commandLineOptions = (cb)=>{
+exports.transferNKSFMetadataToOgg = (cb)=>{
   var folderPath,
     i = process.argv.indexOf("--option");
   if (i > -1) {
     folderPath = process.argv[i + 1];
   }
 
-/* const execAsync = promisify(exec); */
 
   return gulp.src(folderPath + "/**/*.nksf")
 	.pipe(rewrite( async function(file, data) {
 			const fileName =  file.basename;
 			const previewsPath = file.path.split("\\").pop().split("/").slice(0, -1).concat([".previews"]).join("/");
-			const matchingPreviewPath = `"${previewsPath}/${fileName}.ogg"`;
+			const matchingPreviewPath = `${previewsPath}/${fileName}.ogg`;
 
  			let shellCommand = "vorbiscomment -w ";
 			const vorbisJson/*: NksfUniqueKeys */ = remapNksf2Vorbis(data);
-			Object.keys(vorbisJson).forEach(key=>{
-				shellCommand += metadataFieldBuilder(key, vorbisJson[key]);
-			})
+			const metadataFlags = Object.keys(vorbisJson).map(key=>(
+				metadataFieldBuilder(key, vorbisJson[key])
+			 )).flat();
 
-			console.log(shellCommand + matchingPreviewPath);
-			exec( ()=>(shellCommand + matchingPreviewPath) );
-			//await execAsync(shellCommand + matchingPreviewPath);
+			var cmd = spawn(
+        "vorbiscomment",
+        ["-w", ...metadataFlags, matchingPreviewPath],
+        { stdio: "inherit" }
+      );
+
       return undefined;
     }))
   cb();
