@@ -1,15 +1,38 @@
 ## gulp-nks-rewrite-meta
 
-Gulp plugin for rewriting metadata of NKS(Native Kontrol Standard) preset file.
+Gulp plugin for rewriting metadata of NKSF(Native Kontrol Standard) preset file.
+Also serves to copy NKSF metadata to corresponding ogg previews.
 
 ## Installation
-```
-  npm install gulp-nks-rewrite-meta --save-dev
-```
+
+`npm install`
+
+Requires `vorbis-tools` to work:
+macos: `brew install vorbis-tools`
+ubuntu: `sudo apt install vorbis-tools`
+arch: `pacman -Sy vorbis-tools`
+
+if this doesn't work right away, try to install gulp globally:
+`npm install -g gulp`
 
 ## Usage
 
-using the static data.
+### copying NKSF metadata to corresponding OGG files
+From the CLI, in project's directory:
+`gulp transferNKSFMetadataToOgg --option <NKSFfolderName>`
+Expects a folder structure similar to [ testFiles ](./testFiles/):
+```
+NKSFfolder/
+├── .previews
+│   ├── preset1.nksf.ogg
+│   ├── preset2.nksf.ogg
+├── preset1.nksf
+├── preset2.nksf
+```
+
+
+### rewriting NKSF metadata
+using some static data.
 ```coffeescript
 rewrite = require 'gulp-nks-rewrite-meta'
 
@@ -24,7 +47,7 @@ gulp.task 'dist', ->
     .pipe gulp.dest 'dist'
 ```
 
-using the function to provide data.
+using a function to provide data.
 ```coffeescript
 rewrite = require 'gulp-nks-rewrite-meta'
 
