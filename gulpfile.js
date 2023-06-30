@@ -3,28 +3,32 @@
  * DS102: Remove unnecessary code created because of implicit returns
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
-const gulp        = require('gulp');
-const coffeelint  = require('gulp-coffeelint');
-const coffee      = require('gulp-coffee');
-const del         = require('del');
-const watch       = require('gulp-watch');
-const beautify    = require('js-beautify');
-const print 			= require('gulp-print').default;
-const rewrite 		= require('./index');
-var argv 					= require('minimist')(process.argv.slice(2));
+const gulp = require("gulp");
+const coffeelint = require("gulp-coffeelint");
+const coffee = require("gulp-coffee");
+const del = require("del");
+const watch = require("gulp-watch");
+const beautify = require("js-beautify");
+const print = require("gulp-print").default;
+const rewrite = require("./index");
+var argv = require("minimist")(process.argv.slice(2));
 const {
-	remapNksf2Vorbis,
+  remapNksf2Vorbis,
   metadataFieldBuilder,
 } = require("./lib/metadataHelpers.js");
 /* const { exec } = require("child_process");
 const { promisify } = require("util"); */
-var exec = require('gulp-exec');
-spawn = require('child_process').spawn
+var exec = require("gulp-exec");
+spawn = require("child_process").spawn;
+const path = require("path");
+const fs = require("fs");
 
 // paths, misc settings
 const $ = {
-  sparkPresetsDir: '/Library/Arturia/Spark/Third Party/Native Instruments/presets',
-  miniVPresetsDir: '/Library/Arturia/Mini V2/Third Party/Native Instruments/presets'
+  sparkPresetsDir:
+    "/Library/Arturia/Spark/Third Party/Native Instruments/presets",
+  miniVPresetsDir:
+    "/Library/Arturia/Mini V2/Third Party/Native Instruments/presets",
 };
 /*
 gulp.task('coffeelint', () => gulp.src(['./*.coffee', './src/*.coffee'])
@@ -67,67 +71,88 @@ gulp.task('parse-miniv-presets', ['default'], function() {
 */
 
 // parse presets folder
-gulp.task('parsePresets', function() {
+gulp.task("parsePresets", function () {
   var folderPath,
     i = process.argv.indexOf("--option");
   if (i > -1) {
     folderPath = process.argv[i + 1];
   }
 
-  return gulp.src(folderPath+"/**/*.nksf")
-    .pipe(rewrite(function(file, data) {
-      console.info(beautify((JSON.stringify(data)), {indent_size: 2}));
-			// trouve les fichiers correspondants dans le dossier previews
-			// monte le string à rentrer dans les métadonnées.
+  return gulp.src(folderPath + "/**/*.nksf").pipe(
+    rewrite(function (file, data) {
+      let filename = path.basename(file.path);
+      let oggfilename = filename + ".ogg";
+      let dirname = path.dirname(file.path);
+
+      let oggfile = path.join(dirname, ".previews", oggfilename);
+      // find whether oggfile exists
+
+      fs.access(oggfile, fs.constants.F_OK, (err) => {
+        if (err) {
+          console.error("File does not exist");
+        } else {
+          console.log("File exists");
+        }
+      });
       return undefined;
     })
   );
 });
 
 // parse presets folder
-gulp.task('findUniqueKeys', async function() {
+gulp.task("findUniqueKeys", async function () {
   var folderPath,
     i = process.argv.indexOf("--option");
   if (i > -1) {
     folderPath = process.argv[i + 1];
   }
 
-	let jsonTags = [];
+  let jsonTags = [];
 
-  return gulp.src(folderPath+"/*.nksf")
-	.pipe(rewrite(function(file, data) {
-			jsonTags.push(data);
-      return undefined;
-    }))
-	.on("data",()=>{
-		const uniqueKeys = jsonTags.map(item=>Object.keys(item)).flat()
-		.filter(( key, index, collection )=> collection.indexOf(key)=== index);
-		console.log(uniqueKeys);
-	});
+  return gulp
+    .src(folderPath + "/*.nksf")
+    .pipe(
+      rewrite(function (file, data) {
+        jsonTags.push(data);
+        return undefined;
+      })
+    )
+    .on("data", () => {
+      const uniqueKeys = jsonTags
+        .map((item) => Object.keys(item))
+        .flat()
+        .filter((key, index, collection) => collection.indexOf(key) === index);
+      console.log(uniqueKeys);
+    });
 });
 
-gulp.task('findUniqueTypes', async function() {
+gulp.task("findUniqueTypes", async function () {
   var folderPath,
     i = process.argv.indexOf("--option");
   if (i > -1) {
     folderPath = process.argv[i + 1];
   }
 
-	let jsonTypes = [];
+  let jsonTypes = [];
 
-  return  gulp.src(folderPath+"/**/*.nksf")
-	.pipe(rewrite(function(file, data) {
-			jsonTypes.push(data.types.map(type=>type[0]))
-      return undefined;
-    }))
-	.on("data",()=>{
-		const uniqueTypes = jsonTypes.flat().filter((key, index, collection)=>collection.indexOf(key)===index);
-		console.log(uniqueTypes);
-	});
+  return gulp
+    .src(folderPath + "/**/*.nksf")
+    .pipe(
+      rewrite(function (file, data) {
+        jsonTypes.push(data.types.map((type) => type[0]));
+        return undefined;
+      })
+    )
+    .on("data", () => {
+      const uniqueTypes = jsonTypes
+        .flat()
+        .filter((key, index, collection) => collection.indexOf(key) === index);
+      console.log(uniqueTypes);
+    });
 });
 
-exports.testRemapNksf2Vorbis = () =>{
-	const nksfJson = {
+exports.testRemapNksf2Vorbis = () => {
+  const nksfJson = {
     author: "Freelance Soundlabs",
     bankchain: ["Omnisphere", "Factory", "EDM"],
     characters: [
@@ -164,15 +189,15 @@ exports.testRemapNksf2Vorbis = () =>{
     vendor: "Spectrasonics",
   };
 
-	let fileName = "myfile.ogg";
-	let shellCommand = "vorbiscomment -a ";
-	const vorbisJson/*: NksfUniqueKeys */ = remapNksf2Vorbis(nksfJson);
-	Object.keys(vorbisJson).forEach(key=>{
-		shellCommand += metadataFieldBuilder(key, vorbisJson[key]);
-	})
-	shellCommand += fileName;
-	console.log(shellCommand);
-}
+  let fileName = "myfile.ogg";
+  let shellCommand = "vorbiscomment -a ";
+  const vorbisJson /*: NksfUniqueKeys */ = remapNksf2Vorbis(nksfJson);
+  Object.keys(vorbisJson).forEach((key) => {
+    shellCommand += metadataFieldBuilder(key, vorbisJson[key]);
+  });
+  shellCommand += fileName;
+  console.log(shellCommand);
+};
 
 /*
 	Full sequence:
@@ -182,33 +207,39 @@ exports.testRemapNksf2Vorbis = () =>{
 	4. write contents to file
 */
 
-exports.transferNKSFMetadataToOgg = (cb)=>{
+exports.transferNKSFMetadataToOgg = (cb) => {
   var folderPath,
     i = process.argv.indexOf("--option");
   if (i > -1) {
     folderPath = process.argv[i + 1];
   }
 
+  return gulp.src(folderPath + "/**/*.nksf").pipe(
+    rewrite(async function (file, data) {
+      let filename = path.basename(file.path);
+      let oggfilename = filename + ".ogg";
+      let dirname = path.dirname(file.path);
 
-  return gulp.src(folderPath + "/**/*.nksf")
-	.pipe(rewrite( async function(file, data) {
-			const fileName =  file.basename;
-			const previewsPath = file.path.split("\\").pop().split("/").slice(0, -1).concat([".previews"]).join("/");
-			const matchingPreviewPath = `${previewsPath}/${fileName}.ogg`;
+      let oggfile = path.join(dirname, ".previews", oggfilename);
+      // find whether oggfile exists
 
- 			let shellCommand = "vorbiscomment -w ";
-			const vorbisJson/*: NksfUniqueKeys */ = remapNksf2Vorbis(data);
-			const metadataFlags = Object.keys(vorbisJson).map(key=>(
-				metadataFieldBuilder(key, vorbisJson[key])
-			 )).flat();
+      fs.access(oggfile, fs.constants.F_OK, (err) => {
+        if (err) {
+          console.log("unfound");
+        } else {
+          const vorbisJson /*: NksfUniqueKeys */ = remapNksf2Vorbis(data);
+          const metadataFlags = Object.keys(vorbisJson)
+            .map((key) => metadataFieldBuilder(key, vorbisJson[key]))
+            .flat();
 
-			var cmd = spawn(
-        "vorbiscomment",
-        ["-w", ...metadataFlags, matchingPreviewPath],
-        { stdio: "inherit" }
-      );
+          var cmd = spawn("vorbiscomment", ["-w", ...metadataFlags, oggfile], {
+            stdio: "inherit",
+          });
+        }
+      });
 
       return undefined;
-    }))
+    })
+  );
   cb();
-}
+};
